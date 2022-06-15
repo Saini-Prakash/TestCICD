@@ -6,7 +6,6 @@
     </types>
     <types>
         <members>Account.Account_Description__c</members>
-        <members>Account.Test_Email__c</members>
         <name>CustomField</name>
     </types>
     <version>54.0</version>
