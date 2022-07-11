@@ -25,8 +25,9 @@ pipeline{
                                                 qa_tag = sh(script: 'git describe --match "qa-*" --abbrev=0 --tags HEAD', , returnStdout: true).trim()
     
                                             }
-                                            sh "echo $SF_ORG_AUTH_URL > authURLFile"
-                                            sh "sfdx force:auth:sfdxurl:store -f authURLFile -s -a QA"
+                                            sh "sfdx --version"
+                                            //sh "echo $SF_ORG_AUTH_URL > authURLFile"
+                                            //sh "sfdx force:auth:sfdxurl:store -f authURLFile -s -a QA"
                                             }
                                             
                                         }
