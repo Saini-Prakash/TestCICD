@@ -1,8 +1,17 @@
 pipeline{
             agent any
-            stages{
-                stage('Checkout'){
-                checkout scm
-            }
-        }
+            stages {
+                    stage('feature') {
+                            when {
+                                allOf{
+                                branch 'feature/*'
+                                // changeset "force-app/**"
+                                stage('Checkout'){
+                                checkout scm
+                                }
+                                }
+                            }
+                
+                    }
+                }
 }
