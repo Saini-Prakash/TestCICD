@@ -4,7 +4,7 @@ pipeline{
                     stage('feature') {
                             when {
                                 allOf{
-                                branch 'feature/*'
+                                branch 'qa'
                                 // changeset "force-app/**"
                                 stage('Checkout'){
                                 checkout scm
